@@ -1,0 +1,20 @@
+{% extends 'flatpages/default.html' %}
+
+
+{% block title %}
+Load file
+{% endblock title %}
+
+
+{% block content %}
+<div class="container">
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+   <div class="mb-3">
+    <label for="formFileSm" class="form-label"><b>Выберите файл для проверки</b></label>
+    <input name="file" class="form-control form-control-sm" id="formFileSm" type="file">
+  </div>
+  <button type="submit" class="btn btn-primary">Загрузить</button>
+</form>
+</div>
+{% endblock content %}
